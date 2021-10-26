@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SearchTest">
+    <test name="SearchTest">
+        <parameter name="movieName" value="Harry Potter and the Philosopher's Stone"/>
+        <classes>
+            <class name="tests.SearchTest">
+                <methods>
+                    <include name="SearchTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
