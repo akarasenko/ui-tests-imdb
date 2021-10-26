@@ -2,7 +2,8 @@
 
 The project contains UI test example on https://www.imdb.com/
 
-#Setup
+# Setup
+
 1. Open the project in IDE
 2. Install Gradle https://gradle.org/install/
 3. Open build.gradle and reload all Gradle project
@@ -10,7 +11,8 @@ The project contains UI test example on https://www.imdb.com/
 5. Download gecjodriver.exe https://github.com/mozilla/geckodriver/releases and put it into the project directory or add its path to Path variable
 6. Download Allure framework https://github.com/allure-framework/allure2/releases and put it into the project directory or add its path to Path variable
 
-#Test run
+# Test run
+
 1. Be sure that folders /allure-results, /allure-report and /screenshots are empty for each build
 2. Run tests by running console command 'gradlew clean runTests -Pbrowser=%browser%' where %browser% has options "chrome"/"firefox".
 After tests are completed folder /allure-results is generated with run results.
@@ -21,7 +23,8 @@ A generated report is saved in /allure-report folder.
 
 You can also run tests in IDE by clicking on green run button near each test method or test class.
 
-#Structure description
+# Structure description
+
 Tests are based on Java + Gradle + TestNG + Selenium WebDriver + Allure reports.
 Tests can be run in Google Chrome or FireFox browsers. To set the browser add -Pbrowser parameter to command to run.
 Page object pattern is used for the project.
