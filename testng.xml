@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SearchTest">
     <test name="SearchTest">
-        <parameter name="movieName" value="Harry Potter and the Philosopher's Stone"/>
+        <parameter name="movieName" value="Harry Potter and the Prisoner of Azkaban"/>
         <classes>
             <class name="tests.SearchTest">
                 <methods>
