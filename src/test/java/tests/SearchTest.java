@@ -16,4 +16,5 @@ public class SearchTest extends BaseTest {
         app.searchResultPage.clickOnFirstResult();
 
         Assert.assertEquals(app.moviePage.getTitle(), movieName);
-    }}
+    }
+}

@@ -3,6 +3,9 @@ package helpers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.MainPage;
 import pages.MoviePage;
@@ -26,10 +29,22 @@ public class Application {
 
     public Application() throws IOException {
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--lang=en");
+        String browser = java.lang.System.getProperties().getProperty("browser");
 
-        driver = new ChromeDriver(options);
+        if (browser.equals("firefox")) {
+            FirefoxProfile profile = new FirefoxProfile();
+            profile.setPreference("intl.accept_languages", "en-GB");
+            FirefoxOptions options = new FirefoxOptions();
+            options.setProfile(profile);
+            driver = new FirefoxDriver(options);
+        }
+        // in case browser=chrome or other
+        else {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--lang=en-US");
+            driver = new ChromeDriver(options);
+        }
+
         wait = new WebDriverWait(driver, 5);
 
         properties = new Properties();

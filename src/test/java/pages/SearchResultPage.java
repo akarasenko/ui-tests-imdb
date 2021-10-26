@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Properties;
@@ -22,7 +23,7 @@ public class SearchResultPage extends BasePage {
 
     public boolean isResultIncludedMovieName(String movieName) {
         try {
-            resultTable.findElement(By.linkText(movieName));
+            wait.until(ExpectedConditions.visibilityOf(resultTable.findElement(By.linkText(movieName))));
             return true;
         } catch (Exception e) {
             return false;

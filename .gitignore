@@ -15,8 +15,10 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 /chromedriver.exe
+/geckodriver.exe
 /allure-results/
 /allure-reports/
 /.idea/
 '.idea'
 /gradle/
+

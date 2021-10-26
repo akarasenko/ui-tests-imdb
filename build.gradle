@@ -15,8 +15,9 @@ dependencies {
     testCompile 'io.qameta.allure:allure-testng:2.14.0'
 }
 
-test {
+task runTests(type: Test) {
     useTestNG() {
         suites "testng.xml"
     }
+    systemProperties project.properties.subMap(["browser"])
 }
